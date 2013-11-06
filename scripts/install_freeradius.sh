@@ -13,6 +13,12 @@ wget ftp://ftp.freeradius.org/../pub/freeradius/old/freeradius-server-2.2.1.tar.
 tar xzf freeradius-server-*.tar.gz
 cd freeradius-server*
 
+./configure
+make
+make install
+
+ldconfig
+
 useradd radius
 mkdir /var/log/radius
 touch /var/log/radius/radius.log
