@@ -20,9 +20,9 @@ chown -R radius: /var/log/radius
 chown -R radius: /usr/local/etc/raddb
 chown -R radius: /usr/local/var/run/radiusd
 # -xx turns on debugging, not good in production, but useful for our HAproxy testing
-echo 'FREERADIUS_OPTIONS="-xx -l /var/log/radius/radius.log" > /etc/default/radiusd
+echo 'FREERADIUS_OPTIONS="-xx -l /var/log/radius/radius.log"' > /etc/default/radiusd
 
-wget 
+wget https://raw.github.com/nextrevision/docker-freeradius/master/scripts/init_script 
 
 install -o root -g root -m 0755 init_script /etc/init.d/radiusd
 
