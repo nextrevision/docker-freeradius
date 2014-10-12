@@ -1,0 +1,2 @@
+user1   Cleartext-Password := "secretpass"
+        Reply-Message = "Hello, %{User-Name}, the auth was successful!"
