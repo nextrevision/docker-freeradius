@@ -7,7 +7,7 @@ RUN apt-get update -y && apt-get -y install \
     libperl-dev libssl-dev libpam-dev libgdb-dev libgdbm-dev git-core
 
 WORKDIR /opt
-RUN git clone https://github.com/FreeRADIUS/freeradius-server.git
+RUN git clone --depth 1 https://github.com/FreeRADIUS/freeradius-server.git
 
 WORKDIR /opt/freeradius-server
 RUN ./configure && make && make install
